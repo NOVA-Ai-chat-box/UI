@@ -1,297 +1,77 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Student's Form</title>
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="Styles/styles.css" />
-  </head>
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modern UI Dashboard</title>
+        <link rel="stylesheet" href="Styles/styles.css" />
+      </head>
+    <body>
+      <div class="shell">
+        <section class="hero">
+          <div class="badge"><span></span> New experience</div>
+          <h1>Design a smoother digital journey.</h1>
+          <p>
+            Create a refined experience with clear structure, calm visuals, and polished form controls that guide users effortlessly.
+          </p>
 
-  <body>
-    <div class="header">
-      <h3>STUDENT'S REGISTRATION FORM</h3>
-      <div class="basic-info">
-        Basic Information
+          <div class="stats">
+            <div class="stat-card">
+              <strong>+42%</strong>
+              <span>Engagement</span>
+            </div>
+            <div class="stat-card">
+              <strong>4.9/5</strong>
+              <span>User delight</span>
+            </div>
+            <div class="stat-card">
+              <strong>24/7</strong>
+              <span>Support ready</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-panel">
+          <div class="form-head">
+            <h2>Launch your profile</h2>
+            <div class="pill">Ready in minutes</div>
+          </div>
+
+          <form>
+            <div class="row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Ava Brooks" />
+              </div>
+              <div class="field">
+                <label for="role">Role</label>
+                <select id="role">
+                  <option>Product Designer</option>
+                  <option>Developer</option>
+                  <option>Founder</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" type="email" placeholder="ava@example.com" />
+            </div>
+
+            <div class="field">
+              <label for="message">Project brief</label>
+              <textarea id="message" placeholder="Tell us what you want to build..."></textarea>
+            </div>
+
+            <div class="actions">
+              <span class="hint">Everything stays secure and organized.</span>
+              <div style="display: flex; gap: 10px;">
+                <button class="secondary" type="button">Preview</button>
+                <button class="primary" type="submit">Create account</button>
+              </div>
+            </div>
+          </form>
+        </section>
       </div>
-    </div>
-
-    <form id="studentForm" novalidate>
-      <div class="students-details">
-        <div class="name-container">
-          <div class="name-header">Full Name</div>
-
-          <div class="name-section">
-            <div class="first-name-container">
-              <input type="text" id="first-name" class="first-name" name="first-name" required />
-              <div class="field-label">First Name</div>
-              <div class="field-error" data-error-for="first-name"></div>
-            </div>
-            
-            <div class="middle-name-container">
-              <input type="text" id="middle-name" class="middle-name" name="middle-name" required />
-              <div class="field-label">Middle Name</div>
-              <div class="field-error" data-error-for="middle-name"></div>
-            </div>
-
-            <div class="last-name-container">
-              <input type="text" id="last-name" class="last-name" name="last-name" required />
-              <div class="field-label">Last Name</div>
-              <div class="field-error" data-error-for="last-name"></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="id-year">
-          <div class="student-id">
-            <div class="student-id-header">Student Number</div>
-            <input type="text" id="student-id" class="student-id" name="student-id" required />
-            <div class="field-error" data-error-for="student-id"></div>
-            e.g. 11133547
-          </div>
-
-          <div class="student-year">
-            <div class="student-year-header">Year Level</div>
-            <select id="year-level" class="drop-down" name="year-level">
-              <option value="">Please select</option>
-              <option value="100-lvl">1st Year</option>
-              <option value="200-lvl">2nd Year</option>
-              <option value="300-lvl">3rd Year</option>
-              <option value="400-lvl">4th Year</option>
-              <option value="500-lvl">5th Year</option>
-            </select>
-            <div class="field-error" data-error-for="year-level"></div>
-            Select your level
-          </div>
-        </div>
-
-        <div class="student-contact">
-          <div class="student-phone">
-            <div class="student-phone-header">Phone Number</div>
-            <input type="text" id="students-number" class="students-number" name="students-number" required placeholder="(000) 000-0000" />
-            <div class="field-error" data-error-for="students-number"></div>
-          </div>
-
-          <div class="student-email">
-            <div class="student-email-header">Email</div>
-
-            <input type="email" id="students-email" class="students-email" name="students-email" required placeholder="john@example.com" />
-            <div class="field-error" data-error-for="students-email"></div>
-          </div>
-        </div>
-        
-        <div class="student-location">
-          <div class="student-department">
-            <div class="student-department-header">Department</div>
-            <input type="text" id="students-department" class="students-department" name="students-department" required placeholder="Your Department" />
-            <div class="field-error" data-error-for="students-department"></div>
-          </div>
-          
-          <div class="student-address">
-            <div class="student-address-header">Address</div>
-            <input type="text" id="students-address" class="students-address" name="students-address" required placeholder="Your Current Address" />
-            <div class="field-error" data-error-for="students-address"></div>
-          </div>
-        </div>
-         
-        <div class="student-birthday-date">
-          <div class="birthday-header">Birth Day</div>
-
-          <div class="month-day-year">
-            <div class="month">
-              <select id="birth-month" class="drop-down" name="birth-month">
-                <option value="">Please select</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-            </div>
-
-            <div class="day">
-              <select id="birth-day" class="drop-down" name="birth-day">
-                <option value="">Please select</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-              </select>
-            </div>
-
-            <div class="year">
-              <select id="birth-year" class="drop-down" name="birth-year">
-                <option value="">Please select</option>
-                <option value="1990">1990</option>
-                <option value="1991">1991</option>
-                <option value="1992">1992</option>
-                <option value="1993">1993</option>
-                <option value="1994">1994</option>
-                <option value="1995">1995</option>
-                <option value="1996">1996</option>
-                <option value="1997">1997</option>
-                <option value="1998">1998</option>
-                <option value="1999">1999</option>
-                <option value="2000">2000</option>
-                <option value="2001">2001</option>
-                <option value="2002">2002</option>
-                <option value="2003">2003</option>
-                <option value="2004">2004</option>
-                <option value="2005">2005</option>
-                <option value="2006">2006</option>
-                <option value="2007">2007</option>
-                <option value="2008">2008</option>
-                <option value="2009">2009</option>
-                <option value="2010">2010</option>
-                <option value="2011">2011</option>
-                <option value="2012">2012</option>
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div id="submitted-info" class="submitted-info" hidden></div>
-
-        <div>
-          <button class="submit-button" type="submit">Submit</button>
-          <button class="reset-button" type="reset">Reset</button>
-        </div>
-      </div>
-    </form>
-
-    <script>
-      const form = document.getElementById("studentForm");
-      const submittedInfo = document.getElementById("submitted-info");
-
-      function clearFieldErrors() {
-        document.querySelectorAll(".field-error").forEach((errorElement) => {
-          errorElement.textContent = "";
-        });
-        document.querySelectorAll(".error-highlight").forEach((field) => {
-          field.classList.remove("error-highlight");
-        });
-      }
-
-      function showSubmittedDetails(event) {
-        clearFieldErrors();
-
-        const requiredFields = [
-          { name: "first-name", label: "First Name" },
-          { name: "middle-name", label: "Middle Name" },
-          { name: "last-name", label: "Last Name" },
-          { name: "student-id", label: "Student Number" },
-          { name: "year-level", label: "Year Level" },
-          { name: "students-number", label: "Phone Number" },
-          { name: "students-email", label: "Email" },
-          { name: "students-department", label: "Department" },
-          { name: "students-address", label: "Address" }
-        ];
-
-        let hasMissingField = false;
-
-        requiredFields.forEach(({ name, label }) => {
-          const field = form.elements[name];
-          const errorElement = document.querySelector(`[data-error-for="${name}"]`);
-
-          if (!field || field.value.trim() === "") {
-            hasMissingField = true;
-            if (field) {
-              field.classList.add("error-highlight");
-            }
-            if (errorElement) {
-              errorElement.textContent = `${label} is required.`;
-            }
-          }
-        });
-
-        if (hasMissingField) {
-          event.preventDefault();
-          return false;
-        }
-
-        const firstName = form.elements["first-name"].value.trim();
-        const middleName = form.elements["middle-name"].value.trim();
-        const lastName = form.elements["last-name"].value.trim();
-        const studentNumber = form.elements["student-id"].value.trim();
-        const yearLevel = form.elements["year-level"].value;
-        const phoneNumber = form.elements["students-number"].value.trim();
-        const email = form.elements["students-email"].value.trim();
-        const department = form.elements["students-department"].value.trim();
-        const address = form.elements["students-address"].value.trim();
-        const birthMonth = form.elements["birth-month"].value;
-        const birthDay = form.elements["birth-day"].value;
-        const birthYear = form.elements["birth-year"].value;
-
-        submittedInfo.innerHTML = `
-          <h4>Submitted Details</h4>
-          <p><strong>Name:</strong> ${firstName} ${middleName} ${lastName}</p>
-          <p><strong>Student Number:</strong> ${studentNumber}</p>
-          <p><strong>Year Level:</strong> ${yearLevel}</p>
-          <p><strong>Phone:</strong> ${phoneNumber}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Department:</strong> ${department}</p>
-          <p><strong>Address:</strong> ${address}</p>
-          <p><strong>Birth Date:</strong> ${birthMonth} ${birthDay}, ${birthYear}</p>
-        `;
-        submittedInfo.hidden = false;
-        event.preventDefault();
-        return false;
-      }
-
-      form.addEventListener("submit", showSubmittedDetails);
-      form.addEventListener("reset", () => {
-        clearFieldErrors();
-        submittedInfo.innerHTML = "";
-        submittedInfo.hidden = true;
-      });
-    </script>
-  </body>
-</html>
+    </body>
+  </html>
